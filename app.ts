@@ -80,10 +80,11 @@ let combine_values: (a: number, b:number) => number; //Declaramos una variable d
 
 // Function type and callbacks
 
-function Adition(i1: number, i2: number){
+function Adition(i1: number, i2: number, cbf: (result: number) => void){
     const response = i1 + i2;
-    console.log(response);
-    return response;
+    cbf(response);
 }
 
-let value = Adition(5,7);
+Adition(5,7, (res) => {
+    console.log(res);
+});
