@@ -10,14 +10,14 @@ let object2: {name: string; age: number;} = {
     age: 23
 }
 
-console.log(object2.name);
+// console.log(object2.name);
 
 
 // Array 
 
 let firstArray: string[] = ["Daniel", " Robles"];
 let secondArray = [3, 2];
-console.log(firstArray[0]);
+// console.log(firstArray[0]);
 
 // Tuplas
 
@@ -49,7 +49,7 @@ function combine(input1: number | string, input2: number | string){
 
 // Literal types
 
-function combine_two(input1: number | string, input2: number | string, order: string){
+function combine_two(input1: number | string, input2: number | string, order: 'as-number' | 'as-text'){
     let result;
     if (typeof input1 === 'number' && typeof input2 === 'number' || order == 'as-number') {
         result = +input1 + +input2;
@@ -58,3 +58,32 @@ function combine_two(input1: number | string, input2: number | string, order: st
     }
     return result;
 }
+
+// Type Aliases
+
+type Combinable = number | string;
+type CombinableOrder = 'as-number' | 'as-text'
+
+function combine_three(input1: Combinable, input2: Combinable, order: CombinableOrder){
+    let result;
+    if (typeof input1 === 'number' && typeof input2 === 'number' || order == 'as-number') {
+        result = +input1 + +input2;
+    }else{
+        result = input1.toString() + input2.toString();
+    }
+    return result;
+}
+
+// Function type
+let combine_values: (a: number, b:number) => number; //Declaramos una variable de tipo función con dos parámetros y
+                                                     //retorna un número.
+
+// Function type and callbacks
+
+function Adition(i1: number, i2: number){
+    const response = i1 + i2;
+    console.log(response);
+    return response;
+}
+
+let value = Adition(5,7);
