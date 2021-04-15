@@ -12,3 +12,28 @@ function adition (number1: number, number2: number): number{
 }
 
 adition(6,4);
+
+
+// Basics Types
+
+let number: number;
+let text: string;
+let flag: boolean;
+let messages: any;
+let messages2: unknown;
+
+let arrayOne: string[] = ['Daniel', 'Robles'];
+let arrayTwo: Array<string> = ['Daniel', 'Robles'];
+let arrayThree: [number, string] = [23, 'Daniel'];
+
+let signName: 'ADSIB' | 'DIGICERT';
+let objectOne: object = {
+    'name': 'Daniel',
+    'age': 23
+}
+
+let objectTwo: {name: string; age: number} = {
+    name: 'Daniel',
+    age: 23
+}
+
