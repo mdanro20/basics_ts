@@ -99,3 +99,4 @@ function generateError(message, code) {
 }
 var result = generateError('No puede cargar esta página', 501);
 console.log(result);
+//# sourceMappingURL=basics.js.map
