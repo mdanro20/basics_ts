@@ -22,6 +22,9 @@ let flag: boolean;
 let messages: any;
 let messages2: unknown;
 
+
+
+
 let arrayOne: string[] = ['Daniel', 'Robles'];
 let arrayTwo: Array<string> = ['Daniel', 'Robles'];
 let arrayThree: [number, string] = [23, 'Daniel'];
